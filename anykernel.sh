@@ -30,10 +30,10 @@ PATCH_VBMETA_FLAG=auto;
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh
 ui_print " "
-ui_print "SuiKernel"
-ui_print "Hoshimachi Suisei X Kanagawa Yamada"
+ui_print "GrayRavens GKI"
+ui_print "Redemption X ShadowBytePrjkt"
 ui_print " "
-ui_print "By: Kanagawa Yamada"
+ui_print "By: XTENSEI AKA @andrei0514"
 ui_print " "
 # check kernel version
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
