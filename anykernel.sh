@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=
+kernel.string=GrayRavens-Zenithed-V4-KWS-Ethereal-Community
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -30,10 +30,19 @@ PATCH_VBMETA_FLAG=auto;
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh
 ui_print " "
-ui_print "GrayRavens GKI"
-ui_print "Redemption X ShadowBytePrjkt"
+ui_print "  ================================="
+ui_print "      GrayRavens // Zenithed V4    "
+ui_print "  ================================="
 ui_print " "
-ui_print "By: XTENSEI AKA @andrei0514"
+ui_print "    Kuchiba Chisa  x  ShadowbytePrjkt    "
+ui_print "             Zenith On Top              "
+ui_print "           By: andrei0514               "
+ui_print " "
+ui_print "  Onboarding the kernel..."
+ui_print "  Patching the heart of zenith."
+ui_print " "
+ui_print "  Your phone has now been Zenithed."
+ui_print "  Welcome aboard."
 ui_print " "
 # check kernel version
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
