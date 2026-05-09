@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V4-KWS-Ethereal-Community
+kernel.string=GrayRavens-Zenithed-V5-Premura
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -30,19 +30,39 @@ PATCH_VBMETA_FLAG=auto;
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh
 ui_print " "
-ui_print "  ================================="
-ui_print "      GrayRavens // Zenithed V4    "
-ui_print "  ================================="
+ui_print "  ╔══════════════════════════════════════════════╗"
+ui_print "  ║                                              ║"
+ui_print "  ║                     /\\                      ║"
+ui_print "  ║                    /  \\                     ║"
+ui_print "  ║                   / /\\ \\                   ║"
+ui_print "  ║                  / /  \\ \\                  ║"
+ui_print "  ║                 /_/____\\_\\                 ║"
+ui_print "  ║                                              ║"
+ui_print "  ║           G R A Y R A V E N S                ║"
+ui_print "  ║              Z E N I T H E D                 ║"
+ui_print "  ║                  ~ V 5 ~                     ║"
+ui_print "  ║                                              ║"
+ui_print "  ╚══════════════════════════════════════════════╝"
 ui_print " "
-ui_print "    Kuchiba Chisa  x  ShadowbytePrjkt    "
-ui_print "             Zenith On Top              "
-ui_print "           By: andrei0514               "
+ui_print "           ショミー   x   アンドレイ"
+ui_print "              « Zenith On Top »"
+ui_print "              ~ by andrei0514 ~"
 ui_print " "
-ui_print "  Onboarding the kernel..."
-ui_print "  Patching the heart of zenith."
+ui_print "  ──────────────────────────────────────────────"
 ui_print " "
-ui_print "  Your phone has now been Zenithed."
-ui_print "  Welcome aboard."
+ui_print "   [>]  Onboarding the kernel..."
+ui_print "   [>]  Patching the heart of zenith..."
+ui_print "   [>]  Letting her know how much i love her "
+ui_print "   [>]  Aligning the cluster wake pulse..."
+ui_print "   [>]  Initializing the improved prefer_silver..."
+ui_print "   [>]  It will never be the same again. "
+ui_print "   [>]  Thank you for choosing Zenith."
+ui_print "   [>]  The same way i chose her. "
+ui_print " "
+ui_print "  ──────────────────────────────────────────────"
+ui_print " "
+ui_print "        Your phone has now been Zenithed."
+ui_print "                 Welcome aboard."
 ui_print " "
 # check kernel version
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
