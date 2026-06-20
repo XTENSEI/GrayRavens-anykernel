@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V8.0-Zios
+kernel.string=GrayRavens-Zenithed-V9.0-Reimagined
 do.devicecheck=0
 do.modules=0
 do.systemless=0
