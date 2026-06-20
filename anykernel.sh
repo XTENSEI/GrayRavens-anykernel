@@ -62,38 +62,6 @@ if cat /proc/version | grep -q "MillenniumTeam"; then
             ui_print "  If you want to use GrayRavens, flash a different"
             ui_print "  kernel first (e.g. stock or any GKI-compatible"
             ui_print "  kernel), then retry."
-            ui_print " "
-            exit 1
-
-# ---------------------------------------------------------------------------
-# Kenshō crash log dump
-# If Kenshō detected a previous kernel panic (from a prior boot that
-# survived thanks to persistent reserved DRAM), save the log to
-# /sdcard/kensho/ so the user can pull it via ADB after flashing.
-# ---------------------------------------------------------------------------
-if [ -d "/sys/kernel/kensho" ]; then
-    CRASHED=$(cat /sys/kernel/kensho/crashed 2>/dev/null)
-    if [ "$CRASHED" = "1" ]; then
-        mkdir -p /sdcard/kensho
-        cat /sys/kernel/kensho/last_panic > /sdcard/kensho/last_panic.log 2>/dev/null
-        cat /sys/kernel/kensho/info > /sdcard/kensho/kensho_info.log 2>/dev/null
-        ui_print " "
-        ui_print "  ╔════════════════════════════════════════════════╗"
-        ui_print "  ║      ⚠️  KENSHŌ CRASH LOG DETECTED          ║"
-        ui_print "  ╚════════════════════════════════════════════════╝"
-        ui_print " "
-        ui_print "  A previous kernel crash was captured."
-        ui_print "  The log has been saved to:"
-        ui_print " "
-        ui_print "    /sdcard/kensho/last_panic.log"
-        ui_print " "
-        ui_print "  Connect USB and run:"
-        ui_print "    adb pull /sdcard/kensho/"
-        ui_print " "
-    fi
-fi
-            ;;
-    esac
 fi
 
 # ---------------------------------------------------------------------------
