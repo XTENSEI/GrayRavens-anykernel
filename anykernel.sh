@@ -29,6 +29,48 @@ PATCH_VBMETA_FLAG=auto;
 
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh
+
+# ---------------------------------------------------------------------------
+# MillenniumTeam kernel check
+# Abort installation if BOTH conditions are met:
+#   1. Current kernel contains "MillenniumTeam"
+#   2. Device is a MillenniumOSS-maintained device (CK7n, LH7n, LG7n, LG8n, X678B)
+# This prevents flashing GrayRavens on MillenniumOSS ROMs.
+# If only condition 1 is true (MillenniumTeam kernel on a non-MillenniumOSS
+# device), installation proceeds — AnyKernel will overwrite it anyway.
+# ---------------------------------------------------------------------------
+if cat /proc/version | grep -q "MillenniumTeam"; then
+    device=$(getprop ro.product.device)
+    case "$device" in
+        CK7n|LH7n|LG7n|LG8n|X678B)
+            ui_print " "
+            ui_print "  ╔════════════════════════════════════════════════╗"
+            ui_print "  ║           ⚠️  INSTALLATION BLOCKED            ║"
+            ui_print "  ╚════════════════════════════════════════════════╝"
+            ui_print " "
+            ui_print "  MillenniumTeam kernel has been found!"
+            ui_print " "
+            ui_print "  This means one of two things:"
+            ui_print "  "
+            ui_print "  1) You are installing this on a custom ROM"
+            ui_print "     made by MillenniumOSS — this is STRICTLY"
+            ui_print "     NOT ALLOWED."
+            ui_print "  "
+            ui_print "  2) You are using a MillenniumOSS kernel on a"
+            ui_print "     device that MillenniumOSS maintains." 
+            ui_print "  "
+            ui_print "  If you want to use GrayRavens, flash a different"
+            ui_print "  kernel first (e.g. stock or any GKI-compatible"
+            ui_print "  kernel), then retry."
+            ui_print " "
+            exit 1
+            ;;
+    esac
+fi
+
+# ---------------------------------------------------------------------------
+# Banner
+# ---------------------------------------------------------------------------
 ui_print " "
 ui_print "  ╔════════════════════════════════════════════════╗"
 ui_print "  ║                                                ║"
@@ -40,9 +82,9 @@ ui_print "  ║          ████   Z E N I T H  ████              �
 ui_print "  ║           ████▄           ▄████                ║"
 ui_print "  ║            ▀███████████████████▀               ║"
 ui_print "  ║                                                ║"
-ui_print "  ║          ─── V E R S I O N  8.0 ───            ║"
-ui_print "  ║            ·  H I B I K I  ·                   ║"
-ui_print "  ║            The GPU wakes the CPU               ║"
+ui_print "  ║         ─── V E R S I O N  9.0 ───            ║"
+ui_print "  ║         ·  R E I M A G I N E D  ·             ║"
+ui_print "  ║        GrayRavens awakens the kernel           ║"
 ui_print "  ║                                                ║"
 ui_print "  ╚════════════════════════════════════════════════╝"
 ui_print " "
@@ -61,7 +103,10 @@ ui_print "   [✦]  Thank you for choosing Zenith."
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
-# check kernel version
+
+# ---------------------------------------------------------------------------
+# Kernel version check
+# ---------------------------------------------------------------------------
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
 case "$kernel_version" in
     5.10.*) supp=true ;;
