@@ -45,7 +45,7 @@ if cat /proc/version | grep -q "MillenniumTeam"; then
         CK7n|LH7n|LG7n|LG8n|X678B)
             ui_print " "
             ui_print "  ╔════════════════════════════════════════════════╗"
-            ui_print "  ║           ⚠️  INSTALLATION BLOCKED            ║"
+            ui_print "  ║           ⚠️  INSTALLATION BLOCKED             ║"
             ui_print "  ╚════════════════════════════════════════════════╝"
             ui_print " "
             ui_print "  MillenniumTeam kernel has been found!"
@@ -57,11 +57,15 @@ if cat /proc/version | grep -q "MillenniumTeam"; then
             ui_print "     NOT ALLOWED."
             ui_print "  "
             ui_print "  2) You are using a MillenniumOSS kernel on a"
-            ui_print "     device that MillenniumOSS maintains." 
+            ui_print "     device that MillenniumOSS maintains."
             ui_print "  "
             ui_print "  If you want to use GrayRavens, flash a different"
             ui_print "  kernel first (e.g. stock or any GKI-compatible"
             ui_print "  kernel), then retry."
+            ui_print " "
+            abort
+            ;;
+    esac
 fi
 
 # ---------------------------------------------------------------------------
