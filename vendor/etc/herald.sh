@@ -1,12 +1,12 @@
 #!/system/bin/sh
-# herald-daemon.sh — userspace property relay for Herald
+# herald.sh — userspace property relay for Herald
 #
 # Polls /sys/kernel/herald/queue/*/ for pending property changes
 # and applies them with setprop(1).  Runs as a continuous daemon
 # so Herald can publish at any time; the oneshot flag in init.rc
 # simply means init won't restart us if we crash.
 #
-# Started by init.herald.rc after sys.boot_completed=1.
+# Started by /vendor/etc/init/herald.rc after sys.boot_completed=1.
 #
 # Author: GrayRavens
 
