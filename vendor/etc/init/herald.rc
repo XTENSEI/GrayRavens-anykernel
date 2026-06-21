@@ -10,7 +10,6 @@ service herald-daemon /vendor/etc/herald.sh
     group root
     oneshot
     disabled
-    seclabel u:r:system_app:s0
 
 on property:sys.boot_completed=1
     start herald-daemon
