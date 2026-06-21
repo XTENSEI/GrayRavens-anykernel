@@ -1,0 +1,15 @@
+# init.herald.rc — Herald daemon for kernel-to-userspace property relay
+#
+# Starts herald-daemon.sh after sys.boot_completed=1 so that
+# setprop(1) is fully available.  The daemon polls the Herald
+# kernel queue and applies pending property changes.
+
+service herald-daemon /sbin/herald-daemon.sh
+    class main
+    user root
+    group root
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start herald-daemon
