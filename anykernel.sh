@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V9.0-Empyrean
+kernel.string=GrayRavens-Zenithed-V10.0-Empyrean
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -82,7 +82,7 @@ ui_print "  ║          ████   Z E N I T H  ████              �
 ui_print "  ║           ████▄           ▄████                ║"
 ui_print "  ║            ▀███████████████████▀               ║"
 ui_print "  ║                                                ║"
-ui_print "  ║         ─── V E R S I O N  9.0 ───            ║"
+ui_print "  ║         ─── V E R S I O N  10.0 ───            ║"
 ui_print "  ║             ·  E M P Y R E A N  ·              ║"
 ui_print "  ║        GrayRavens awakens the kernel           ║"
 ui_print "  ║                                                ║"
