@@ -107,10 +107,10 @@ ui_print " "
 # ---------------------------------------------------------------------------
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
 case "$kernel_version" in
-    5.10.*|5.15.*) supp=true ;;
+    5.15.*) supp=true ;;
     *) supp=false ;;
 esac
-ui_print " " "-> 5.10/5.15 Kernel: $supp"
+ui_print " " "-> 5.15 Kernel: $supp"
 $supp || exit 1
 
 # boot install
