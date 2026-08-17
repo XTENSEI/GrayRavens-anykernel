@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V5-Zenithed
+kernel.string=GrayRavens-Zenithed-V5-Stellar
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -79,7 +79,7 @@ ui_print "  ║                                            ║"
 ui_print "  ║      ◢◤  S H A P I N G   G A P S  ◥◣       ║"
 ui_print "  ║         「  Z E N I T H   V 5    」          ║"
 ui_print "  ║                                            ║"
-ui_print "  ║         ───  Z E N I T H E D  ───          ║"
+ui_print "  ║         ───  S T E L L A R  ───            ║"
 ui_print "  ║      the kernel that bends boundaries      ║"
 ui_print "  ║                                            ║"
 ui_print "  ║    ✦  GrayRavens awakens the kernel  ✦     ║"
