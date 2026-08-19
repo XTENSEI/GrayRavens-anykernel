@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed
+kernel.string=GrayRavens-Zenithed-V1
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -31,44 +31,6 @@ PATCH_VBMETA_FLAG=auto;
 . tools/ak3-core.sh
 
 # ---------------------------------------------------------------------------
-# MillenniumTeam kernel check
-# Abort installation if BOTH conditions are met:
-#   1. Current kernel contains "MillenniumTeam"
-#   2. Device is a MillenniumOSS-maintained device (CK7n, LH7n, LG7n, LG8n, X678B)
-# This prevents flashing GrayRavens on MillenniumOSS ROMs.
-# If only condition 1 is true (MillenniumTeam kernel on a non-MillenniumOSS
-# device), installation proceeds — AnyKernel will overwrite it anyway.
-# ---------------------------------------------------------------------------
-if cat /proc/version | grep -q "MillenniumTeam"; then
-    device=$(getprop ro.product.device)
-    case "$device" in
-        CK7n|LH7n|LG7n|LG8n|X678B)
-            ui_print " "
-            ui_print "  ╔════════════════════════════════════════════════╗"
-            ui_print "  ║           ⚠️  INSTALLATION BLOCKED             ║"
-            ui_print "  ╚════════════════════════════════════════════════╝"
-            ui_print " "
-            ui_print "  MillenniumTeam kernel has been found!"
-            ui_print " "
-            ui_print "  This means one of two things:"
-            ui_print "  "
-            ui_print "  1) You are installing this on a custom ROM"
-            ui_print "     made by MillenniumOSS — this is STRICTLY"
-            ui_print "     NOT ALLOWED."
-            ui_print "  "
-            ui_print "  2) You are using a MillenniumOSS kernel on a"
-            ui_print "     device that MillenniumOSS maintains."
-            ui_print "  "
-            ui_print "  If you want to use GrayRavens, flash a different"
-            ui_print "  kernel first (e.g. stock or any GKI-compatible"
-            ui_print "  kernel), then retry."
-            ui_print " "
-            abort
-            ;;
-    esac
-fi
-
-# ---------------------------------------------------------------------------
 # Banner
 # ---------------------------------------------------------------------------
 ui_print " "
@@ -77,9 +39,9 @@ ui_print "  ║                                            ║"
 ui_print "  ║         ·  G R A Y R A V E N S  ·          ║"
 ui_print "  ║                                            ║"
 ui_print "  ║      ◢◤  S H A P I N G   G A P S  ◥◣       ║"
-ui_print "  ║         「  Z E N I T H   V 1 4  」          ║"
+ui_print "  ║         「  Z E N I T H   V 1   」          ║"
 ui_print "  ║                                            ║"
-ui_print "  ║           ───  Y U K A R I  ───            ║"
+ui_print "  ║         ───  Z E N I T H E D  ───          ║"
 ui_print "  ║      the kernel that bends boundaries      ║"
 ui_print "  ║                                            ║"
 ui_print "  ║    ✦  GrayRavens awakens the kernel  ✦     ║"
@@ -92,10 +54,9 @@ ui_print "              ~ by andrei0514 ~"
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
-ui_print "   [✦]  Forging GPU→CPU resonance..."
-ui_print "   [✦]  Calibrating devfreq governor automation..."
+ui_print "   [✦]  Awakening the 5.4 beast..."
 ui_print "   [✦]  Hardening scheduler capacity paths..."
-ui_print "   [✦]  Aligning game mode detection..."
+ui_print "   [✦]  Proactive compaction engaged..."
 ui_print "   [✦]  Initializing preferred silver cores..."
 ui_print "   [✦]  Thank you for choosing Zenith."
 ui_print " "
@@ -107,10 +68,10 @@ ui_print " "
 # ---------------------------------------------------------------------------
 kernel_version=$(cat /proc/version | awk -F '-' '{print $1}' | awk '{print $3}')
 case "$kernel_version" in
-    5.10.*) supp=true ;;
+    5.4.*) supp=true ;;
     *) supp=false ;;
 esac
-ui_print " " "-> 5.10 Kernel: $supp"
+ui_print " " "-> 5.4 Kernel: $supp"
 $supp || exit 1
 
 # boot install
