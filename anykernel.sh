@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V14-Yukari
+kernel.string=GrayRavens-Zenithed-V15-Akari
 do.devicecheck=0
 do.modules=0
 do.systemless=0
