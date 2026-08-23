@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V15-Akari
+kernel.string=GrayRavens-Akatsuki-V16
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -77,9 +77,9 @@ ui_print "  ║                                            ║"
 ui_print "  ║         ·  G R A Y R A V E N S  ·          ║"
 ui_print "  ║                                            ║"
 ui_print "  ║      ◢◤  S H A P I N G   G A P S  ◥◣       ║"
-ui_print "  ║         「  Z E N I T H   V 1 5  」          ║"
+ui_print "  ║         「 A K A T S U K I   V 1 6 」       ║"
 ui_print "  ║                                            ║"
-ui_print "  ║           ───  A K A R I  ───              ║"
+ui_print "  ║        ───  A  C L E A N  S T A R T  ───   ║"
 ui_print "  ║      the kernel that bends boundaries      ║"
 ui_print "  ║                                            ║"
 ui_print "  ║    ✦  GrayRavens awakens the kernel  ✦     ║"
@@ -87,17 +87,14 @@ ui_print "  ║                                            ║"
 ui_print "  ╚════════════════════════════════════════════╝"
 ui_print " "
 ui_print "           ショミー   ×   アンドレイ"
-ui_print "              « Zenith On Top »"
 ui_print "              ~ by andrei0514 ~"
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
-ui_print "   [✦]  Forging GPU→CPU resonance..."
-ui_print "   [✦]  Calibrating devfreq governor automation..."
-ui_print "   [✦]  Hardening scheduler capacity paths..."
-ui_print "   [✦]  Aligning game mode detection..."
-ui_print "   [✦]  Initializing preferred silver cores..."
-ui_print "   [✦]  Thank you for choosing Zenith."
+ui_print "   [✦]  Initializing DAMON data access monitor..."
+ui_print "   [✦]  Loading AOSP 5.10.265 stable base..."
+ui_print "   [✦]  Verifying KMI symbol integrity..."
+ui_print "   [✦]  Thank you for choosing Akatsuki."
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
