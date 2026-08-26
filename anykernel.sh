@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V6-Sora
+kernel.string=GrayRavens-Zenithed-V7-Hoshi
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -41,9 +41,9 @@ ui_print "  ║                                            ║"
 ui_print "  ║         ·  G R A Y R A V E N S  ·          ║"
 ui_print "  ║                                            ║"
 ui_print "  ║      ◢◤  S H A P I N G   G A P S  ◥◣       ║"
-ui_print "  ║         「  Z E N I T H   V 6    」          ║"
+ui_print "  ║         「  Z E N I T H   V 7    」          ║"
 ui_print "  ║                                            ║"
-ui_print "  ║         ───  S O R A  ───                  ║"
+ui_print "  ║         ───  H O S H I  ───                 ║"
 ui_print "  ║      the kernel that bends boundaries      ║"
 ui_print "  ║                                            ║"
 ui_print "  ║    ✦  GrayRavens awakens the kernel  ✦     ║"
