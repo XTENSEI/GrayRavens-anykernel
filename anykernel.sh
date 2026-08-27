@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Akatsuki-V16
+kernel.string=GrayRavens
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -72,29 +72,18 @@ fi
 # Banner
 # ---------------------------------------------------------------------------
 ui_print " "
-ui_print "  ╔════════════════════════════════════════════╗"
-ui_print "  ║                                            ║"
-ui_print "  ║         ·  G R A Y R A V E N S  ·          ║"
-ui_print "  ║                                            ║"
-ui_print "  ║      ◢◤  S H A P I N G   G A P S  ◥◣       ║"
-ui_print "  ║         「 A K A T S U K I   V 1 6 」       ║"
-ui_print "  ║                                            ║"
-ui_print "  ║        ───  A  C L E A N  S T A R T  ───   ║"
-ui_print "  ║      the kernel that bends boundaries      ║"
-ui_print "  ║                                            ║"
-ui_print "  ║    ✦  GrayRavens awakens the kernel  ✦     ║"
-ui_print "  ║                                            ║"
-ui_print "  ╚════════════════════════════════════════════╝"
-ui_print " "
-ui_print "           ショミー   ×   XTENSEI"
-ui_print "              « GrayRavens »"
+ui_print "  G R A Y R A V E N S"
+ui_print "  G K I   K E R N E L"
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
-ui_print "   [✦]  Initializing DAMON data access monitor..."
-ui_print "   [✦]  Loading AOSP 5.10.266 stable base..."
-ui_print "   [✦]  Verifying KMI symbol integrity..."
-ui_print "   [✦]  Thank you for choosing Akatsuki."
+ui_print "   Loading kernel image........................ OK"
+ui_print "   Setting up memory.......................... OK"
+ui_print "   Initializing processor.................... OK"
+ui_print "   Detecting hardware....................... OK"
+ui_print "   Mounting system partitions.............. OK"
+ui_print "   Verifying kernel integrity............... OK"
+ui_print "   Starting init process..................... OK"
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
