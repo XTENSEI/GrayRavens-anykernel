@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=GrayRavens-Zenithed-V7-Hoshi
+kernel.string=GrayRavens
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -31,37 +31,21 @@ PATCH_VBMETA_FLAG=auto;
 . tools/ak3-core.sh
 
 # ---------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------
 # Banner
 # ---------------------------------------------------------------------------
 ui_print " "
-ui_print "  ╔════════════════════════════════════════════╗"
-ui_print "  ║                                            ║"
-ui_print "  ║         ·  G R A Y R A V E N S  ·          ║"
-ui_print "  ║                                            ║"
-ui_print "  ║      ◢◤  S H A P I N G   G A P S  ◥◣       ║"
-ui_print "  ║         「  Z E N I T H   V 7    」          ║"
-ui_print "  ║                                            ║"
-ui_print "  ║         ───  H O S H I  ───                 ║"
-ui_print "  ║      the kernel that bends boundaries      ║"
-ui_print "  ║                                            ║"
-ui_print "  ║    ✦  GrayRavens awakens the kernel  ✦     ║"
-ui_print "  ║                                            ║"
-ui_print "  ╚════════════════════════════════════════════╝"
-ui_print " "
-ui_print "           ショミー   ×   アンドレイ"
-ui_print "              « Zenith On Top »"
-ui_print "              ~ by andrei0514 ~"
+ui_print "  G R A Y R A V E N S"
+ui_print "  G K I   K E R N E L"
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
-ui_print "   [✦]  Forging GPU→CPU resonance..."
-ui_print "   [✦]  Calibrating devfreq governor automation..."
-ui_print "   [✦]  Hardening scheduler capacity paths..."
-ui_print "   [✦]  Aligning game mode detection..."
-ui_print "   [✦]  Initializing preferred silver cores..."
-ui_print "   [✦]  Thank you for choosing Zenith."
+ui_print "   Loading kernel image........................ OK"
+ui_print "   Setting up memory.......................... OK"
+ui_print "   Initializing processor.................... OK"
+ui_print "   Detecting hardware....................... OK"
+ui_print "   Mounting system partitions.............. OK"
+ui_print "   Verifying kernel integrity............... OK"
+ui_print "   Starting init process..................... OK"
 ui_print " "
 ui_print "  ────────────────────────────────────────────────"
 ui_print " "
