@@ -107,33 +107,3 @@ else
     dump_boot # use split_boot to skip ramdisk unpack, e.g. for devices with init_boot ramdisk
     write_boot # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
 fi
-
-# ---------------------------------------------------------------------------
-# OPLUS sepolicy for builds without KernelSU
-#
-# The /proc nodes need nothing here: the kernel marks them fs-internal, so the
-# LSM hooks skip them on every variant. /data/nandswap is an ordinary file on
-# /data and cannot be marked that way, so Magisk has to carry the rules. KSU
-# builds get the same lines injected in-kernel and never reach this block.
-# ---------------------------------------------------------------------------
-if [ -d /data/adb/modules ]; then
-    MODDIR=/data/adb/modules/grayravens_oplus
-    rm -rf "$MODDIR"
-    mkdir -p "$MODDIR"
-    cat > "$MODDIR/module.prop" <<MODPROP
-id=grayravens_oplus
-name=GrayRavens OPLUS sepolicy
-version=1
-versionCode=1
-author=GrayRavens
-description=Let the vendor nandswap service use /data/nandswap without KernelSU.
-MODPROP
-    cat > "$MODDIR/sepolicy.rule" <<RULE
-allow nandswap nandswap_file dir { create search write add_name }
-allow nandswap nandswap_file file { create open read write getattr setattr }
-allow init nandswap_file dir { create search write add_name }
-allow vendor_init nandswap_file dir { create search }
-RULE
-    ui_print "  OPLUS sepolicy module installed........... OK"
-fi
-
